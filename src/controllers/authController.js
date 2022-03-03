@@ -28,7 +28,7 @@ export async function signIn(req, res) {
         VALUES ($1, $2)
       `, [user.rows[0].id, token]);
 
-      res.send({ token });
+      res.send(token);
       return;
     }
 
